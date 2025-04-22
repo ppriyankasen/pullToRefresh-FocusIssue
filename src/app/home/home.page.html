@@ -7,8 +7,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)" mode="ios">
+    <!-- <ion-refresher-content></ion-refresher-content> -->
   </ion-refresher>
 
   <ion-header collapse="condense">
@@ -24,4 +24,19 @@
       <app-message [message]="message"></app-message>
     }
   </ion-list>
+  <ion-button>Default</ion-button>
+  <span hidden id="btnText">This is a test for aria-describedby</span>
+  <ion-button aria-describedby="btnText">Aria Test</ion-button>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-select value="apple" aria-describedby="btnText">
+        <ion-select-option value="apple">Apple</ion-select-option>
+        <ion-select-option value="banana">Banana</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
