@@ -12,8 +12,12 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'label',
     pathMatch: 'full',
+  },
+  {
+    path: 'label',
+    loadComponent: () => import('./label/label.page').then( m => m.LabelPage)
   },
 ];
 
