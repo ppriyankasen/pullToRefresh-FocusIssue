@@ -16,8 +16,8 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'label',
-    loadComponent: () => import('./label/label.page').then( m => m.LabelPage)
-  },
+    path: 'inputbox',
+    loadComponent: () => import('./inputbox/inputbox.page').then( m => m.InputboxPage)
+  }
 ];
 
