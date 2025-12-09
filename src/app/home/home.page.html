@@ -14,6 +14,20 @@
   <span hidden id="btnText">This is a test for aria-describedby</span>
   <ion-button aria-describedby="btnText">Aria Test</ion-button>
 
+  <div class="input_row">
+    <div class="input_wrap">
+      <ion-input type="text" id="contractNumber" maxlength="12" [attr.placeholder]="123456789"
+        [attr.aria-label]="'subscriber I D'" aria-required="true" autocorrect="off" autocapitalize="off"
+        spellcheck="false" #contractNumber appScrollToElement>
+      </ion-input>
+    </div>
+    <div class="close_icon_wrap">
+      <ion-button fill="clear" id="closeIcon" [attr.aria-label]="'clear enrollee I D'" aria-pressed="false">
+        <ion-icon class="dicon" name="close-circle"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
 
   <ion-list>
     <ion-item>
@@ -35,7 +49,7 @@
 
   <ion-list>
     @for (message of getMessages(); track message) {
-      <app-message [message]="message"></app-message>
+    <app-message [message]="message"></app-message>
     }
   </ion-list>
   <ion-button>Default</ion-button>
